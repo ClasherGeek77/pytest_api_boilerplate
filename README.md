@@ -1,7 +1,16 @@
-How to use this repository
+# pytest-api-minimal-learning-assignment 🎓
 
-1) You need to install python and its necessary library. You can explore which library you need to install by check the import syntax written in the files inside.
+[![Pytest](https://img.shields.io/badge/Framework-Pytest-blue?logo=pytest)](https://docs.pytest.org/en/7.4.x/)
+[![Training Material](https://img.shields.io/badge/Status-Educational-success?logo=github)]()
 
-2) You need to fill in the blank (...) until each section are working fine.
+A minimal, highly focused repository designed for onboarding and teaching Python/Pytest API automation. Extensively used during training batches at organizations like **JULO** to transition manual engineers into SDET roles.
 
-Tips : Since each file line are short, you can copy paste them to ChatGPT and ask it to explain the thing for you.
+## 🎯 Objective
+To provide a clean, distraction-free playground for learning API assert methodologies, `requests` library usage, and Pytest fixture implementation.
+
+## 📚 Features
+1. **Clear Examples**: Simple GET/POST requests and JSON extractions.
+2. **Pytest Fixtures**: Demonstrating dependency injection for setting up headers and tokens.
+3. **Intentional Failures**: A sandbox designed to teach debugging techniques.
+
+> *"I don't just automate tests. I build testers."* — Teddy Lioner
