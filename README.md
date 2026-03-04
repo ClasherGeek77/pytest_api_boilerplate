@@ -1,5 +1,6 @@
-# pytest-api-minimal-learning-assignment 🎓
+# pytest-api-automation-framework 🎓
 
+[![Pytest CI](https://github.com/ClasherGeek77/pytest-api-automation-framework/actions/workflows/pytest-ci.yml/badge.svg)](https://github.com/ClasherGeek77/pytest-api-automation-framework/actions/workflows/pytest-ci.yml)
 [![Pytest](https://img.shields.io/badge/Framework-Pytest-blue?logo=pytest)](https://docs.pytest.org/en/7.4.x/)
 [![Training Material](https://img.shields.io/badge/Status-Educational-success?logo=github)]()
 
