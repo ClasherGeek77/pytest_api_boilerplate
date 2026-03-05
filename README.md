@@ -1,4 +1,4 @@
-# UNI Pytest API Automation Framework 🎓
+# Pytest API Automation Framework 🎓
 
 [![Pytest CI](https://github.com/ClasherGeek77/pytest-api-automation-framework/actions/workflows/pytest-ci.yml/badge.svg)](https://github.com/ClasherGeek77/pytest-api-automation-framework/actions/workflows/pytest-ci.yml)
 [![Pytest](https://img.shields.io/badge/Framework-Pytest-blue?logo=pytest)](https://docs.pytest.org/en/7.4.x/)
