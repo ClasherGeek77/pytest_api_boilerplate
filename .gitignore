@@ -1,0 +1,17 @@
+# Python / Pytest
+__pycache__/
+.pytest_cache/
+venv/
+env/
+.env
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# IDEs
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
