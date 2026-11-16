@@ -1,0 +1,19 @@
+# start it with ./run_test.sh and RUN_MODE="docker", it brings the values below
+services:
+  tests:
+    image: pytest-autotest-boilerplate
+    build:
+      context: .
+      args:
+        PYTHON_VERSION: ${PYTHON_VERSION:?start it with ./run_test.sh, it reads .python-version}
+    # the api target is the clone on localhost, so a docker run needs to reach it,
+    # host networking is the easy way (mac hosts ignore this, see README docker)
+    # network_mode: host
+    environment:
+      - TEST_PATH
+      - REPORT_NAME
+      - TIMESTAMP
+    volumes:
+      # reports and settings are on this machine, a change in test.env needs no rebuild
+      - ./reports:/app/reports
+      - ./test.env:/app/test.env
