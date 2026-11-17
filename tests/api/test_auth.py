@@ -7,14 +7,6 @@ def test_login_with_valid_credentials_returns_a_token(testdata, api, assertion):
     )
 
 
-def test_login_without_password_is_refused(testdata, api):
-    response = api.auth_client.login(testdata.login_email)
-    response.expect_error(
-        400,
-        "Missing password",
-    )
-
-
 def test_register_with_valid_credentials_returns_id_and_token(testdata, api, assertion):
     response = api.auth_client.register(
         testdata.login_email, testdata.register_password
@@ -31,9 +23,17 @@ def test_register_with_valid_credentials_returns_id_and_token(testdata, api, ass
     )
 
 
-def test_register_without_password_is_refused(testdata, api):
-    response = api.auth_client.register(testdata.login_email)
-    response.expect_error(
-        400,
-        "Missing password",
-    )
+# the data-driven pattern from the reference repo: one test, one table,
+# one id per row, expectations still come from constants not the table
+import pytest
+
+
+@pytest.mark.parametrize(
+    ("call_name", "expected_error"),
+    [("login", "Missing password"), ("register", "Missing password")],
+    ids=["login", "register"],
+)
+def test_auth_without_password_is_refused(testdata, api, call_name, expected_error):
+    call = getattr(api.auth_client, call_name)
+    response = call(testdata.login_email)
+    response.expect_error(400, expected_error)
