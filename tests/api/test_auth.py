@@ -1,3 +1,6 @@
+import pytest
+
+
 def test_login_with_valid_credentials_returns_a_token(testdata, api, assertion):
     response = api.auth_client.login(testdata.login_email, testdata.login_password)
     body = response.expect(200).body
@@ -25,7 +28,6 @@ def test_register_with_valid_credentials_returns_id_and_token(testdata, api, ass
 
 # the data-driven pattern from the reference repo: one test, one table,
 # one id per row, expectations still come from constants not the table
-import pytest
 
 
 @pytest.mark.parametrize(
