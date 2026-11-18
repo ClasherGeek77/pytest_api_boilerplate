@@ -8,8 +8,6 @@ cd "$(dirname "$0")"
 # base test path, edit this line to change what runs by default, variants:
 #   TEST_PATH="tests/"                                                          everything
 #   TEST_PATH="tests/api/"                                                      all api tests
-#   TEST_PATH="tests/web/"                                                      all web tests
-#   TEST_PATH="tests/web/ --headed"                                             web tests with the browser shown, local only
 #   TEST_PATH="tests/api/test_users.py"                                         one file
 #   TEST_PATH="tests/api/test_users.py::test_getting_unknown_user_is_not_found" one test
 #   TEST_PATH="tests/ -k login"                                                 tests whose name contains "login"
